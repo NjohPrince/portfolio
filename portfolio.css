@@ -1,0 +1,254 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body{
+    background-color: black;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.nav-wrapper{
+    position: fixed;
+    position: -webkit-sticky;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: orangered;
+    height: 75px;
+    border-bottom: 2px solid gray;
+    z-index: 1;
+}
+
+.menu1 a{
+    color: white;
+    font-size: 22px;
+    padding: 15px;
+}
+
+.menu1 a:hover{
+    color: orangered;
+    background: black;
+}
+
+.nav-wrapper .name{
+    margin-right: 15px;
+}
+
+.name > h2{
+    color: white;
+}
+
+.menu-button{
+    color: white;
+    font-size: 15px;
+    padding: 15px;
+    cursor: pointer;
+    border: 1px solid white;
+    background-color: transparent;
+    margin-left: 15px;
+}
+
+.menu{
+    position: relative;
+    display: inline-block;
+}
+
+.drop-down{
+    color: white;
+    display: none;
+    position: absolute;
+    min-width: 157px;
+    z-index: 1;
+    background-color: orangered;
+    border: 1px solid gray;
+    margin-left: 15px;
+}
+
+.drop-down > a{
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    border-bottom: 1px solid gray;
+}
+
+.drop-down > a:hover{
+    color: white;
+    background-color: black;
+}
+
+.menu:hover .drop-down{
+   display: block;
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-color: black;
+}
+
+.sub-section{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.sub-section > .label > h1,
+.sub-section > .text-wrapper > h2{
+    color: white;
+    margin-bottom: 15px;
+}
+
+.name{
+    color: orangered;
+}
+
+.text{
+    color: orange;
+}
+
+.text-wrapper p{
+    color: white;
+    line-height: 1.5;
+}
+
+.button{
+    margin-top: 75px;
+}
+
+.button a{
+    color: rgb(100, 93, 90);
+    border: 1px solid grey;
+    padding: 25px;
+    border-radius: 35px;
+    font-weight: bold;
+}
+
+.button a:hover{
+    background-color: orangered;
+    color: white;
+    box-shadow: 0px 2px 15px rgba(255, 136, 0);
+}
+
+.services{
+    width: 100%;
+    background-color: orangered;
+}
+
+.services > h1{
+    text-align: center;
+    color: white;
+    padding: 35px;
+}
+
+.service-1{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+}
+
+.service-box:nth-child(odd){
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.service-box{
+    background-color: orange;
+    border: 2px solid black;
+    margin-bottom: 35px;
+    height: 300px;
+}
+
+.service-head{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+
+.service-head h3{
+    color: white;
+    padding: 15px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.service-body{
+    padding: 25px;
+}
+
+.service-body p{
+    color: white;
+    text-align: center;
+    font-size: 18px;
+}
+
+.skill{
+    padding: 12px;
+    color: orangered !important;
+}
+
+footer{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 55px;
+}
+
+footer > p{
+    color: grey;
+    font-size: 15px;
+}
+
+@media screen and (max-width: 850px){
+    .menu{
+        display: block;
+    }
+    .service-1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .service-box{
+        width: 70%;
+    }
+    .menu1{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 850px){
+    .menu{
+        display: none;
+    }
+    .service-box:nth-child(1),
+    .service-box:nth-child(2){
+        width: 40%;
+    }
+    .service-box:nth-child(2){
+        margin-right: 25px;
+    }
+    .service-box:nth-child(3){
+        width: 45%;
+        margin-left: 27%;
+    }
+}
